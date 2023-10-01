@@ -1,13 +1,19 @@
 # CountryPedia
-The project contains:
+
+**Description**
+The project is based on the API from [REST countries.](https://restcountries.com/)
+<hr>
+With possibilities as searching countries by name, region and "show all", it gives information about the flag, name, capital, region and population. 
+<hr>
+
+
+**Contains:**
 - HTML
 - CSS
 - JavaScript
 - Bootstrap
 - Ajax
 - API
-  
-Content source: API from https://restcountries.com/
 
 Preview site: http://htmlpreview.github.io/?https://github.com/Ardra1/countryPedia/blob/main/countryPedia.html
 
