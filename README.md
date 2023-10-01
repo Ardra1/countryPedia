@@ -1,4 +1,4 @@
-# CountryPedia
+# [CountryPedia](https://ardra1.github.io/countryPedia/index)
 
 **Description**
 <br>
@@ -16,6 +16,5 @@ With possibilities as searching countries by name, region and "show all", it giv
 - Ajax
 - API
 
-Preview site: http://htmlpreview.github.io/?https://github.com/Ardra1/countryPedia/blob/main/countryPedia.html
+Visit site: [http://htmlpreview.github.io/?https://github.com/Ardra1/countryPedia/blob/main/countryPedia.html](https://ardra1.github.io/countryPedia/index)
 
-***The site is pr def not working fully, due to issues with GitHub pages not reading moduleFiles.***
