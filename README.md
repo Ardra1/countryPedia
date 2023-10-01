@@ -1,6 +1,7 @@
 # CountryPedia
 
 **Description**
+<br>
 The project is based on the API from [REST countries.](https://restcountries.com/)
 <hr>
 With possibilities as searching countries by name, region and "show all", it gives information about the flag, name, capital, region and population. 
