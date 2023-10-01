@@ -103,7 +103,7 @@ const showRegionIcon = (region) =>{
     break; 
     case "oceania" : 
     outputRegionIcon.innerHTML = `<article class="pt-2"> <i class="fa-solid fa-earth-${region} fa-2xl"></i> </article>`
-    break; 
+    
   }
 
   return region;
