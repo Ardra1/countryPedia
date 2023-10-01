@@ -1,9 +1,11 @@
 # CountryPedia
-The project is made with:
+The project contains:
 - HTML
 - CSS
 - JavaScript
 - Bootstrap
+- Ajax
+- API
   
 Content source: API from https://restcountries.com/
 
