@@ -7,4 +7,4 @@ The project is made with:
   
 Content source: API from https://restcountries.com/
 
-#Preview site: http://htmlpreview.github.io/?https://github.com/Ardra1/countryPedia/blob/main/countryPedia.html
+Preview site: http://htmlpreview.github.io/?https://github.com/Ardra1/countryPedia/blob/main/countryPedia.html
