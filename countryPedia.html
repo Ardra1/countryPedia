@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REST countries</title>
+
+    <link rel="stylesheet" href="css/countryPedia.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Audiowide"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"
+      integrity="sha512-emSwuKiMyYedRwflbZB2ghzX8Cw8fmNVgZ6yQNNXXagFzFOaQmbvQ1vmDkddHjm5AITcBIZfC7k4ShQSjgPAmQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="scripts/countryPedia.js"></script>
+  </head>
+  <body class="bg-page-base">
+    <div class="container">
+      <header>
+        <section class="row bg-search-container p-3 border rounded">
+          <article class="col-sm-12">
+            <div class="title-container mt-4 mb-2 d-flex align-items-center">
+              <div class="p-1">
+                <i class="fa-regular fa-map fa-lg"></i>
+              </div>
+              <div>
+                <h1 class="page-title m-0">CountryPedia</h1>
+              </div>
+            </div>
+
+            <div class="card p-3 shadow">
+              <div id="search-container" class="d-flex">
+                <div class="w-50">
+                  <label for="Name">Country</label>
+                  <input
+                    class="w-100"
+                    id="search-container__search-field"
+                    name="Name"
+                    type="text"
+                  />
+                </div>
+                <div class="w-50">
+                  <label for="region">Region</label>
+                  <select
+                    class="w-100 p-1"
+                    name="region"
+                    id="search-container__dropdown"
+                  >
+                    <option value="africa">Africa</option>
+                    <option value="americas">America</option>
+                    <option value="antarctic">Antarctic</option>
+                    <option value="asia">Asia</option>
+                    <option value="europe">Europe</option>
+                    <option value="oceania">Oceania</option>
+                  </select>
+                </div>
+              </div>
+              <div class="mt-3">
+                <div class="button-search-container p-2">
+                  <button
+                    class="btn-primary-dark-blue"
+                    id="search-container__button-all"
+                  >
+                    Show all
+                  </button>
+                  <button
+                    class="btn-primary-dark-blue"
+                    id="search-container__button-name"
+                  >
+                    Search by country
+                  </button>
+                  <button
+                    class="btn-primary-dark-blue"
+                    id="search-container__button-region"
+                  >
+                    Search by region
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+      </header>
+
+      <main>
+        <section id="output-region-icon"></section>
+        <section class="row g-3 mt-1" id="output-countries"></section>
+      </main>
+    </div>
+  </body>
+</html>
