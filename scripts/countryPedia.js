@@ -20,28 +20,7 @@ const showCountries = async () => {
   let htmlTxt = "";
 
   countries.forEach((country) => {
-    htmlTxt += `
-    <article class="col-sm-12 col-md-6 col-lg-4">
-    <div class="country-card shadow h-100 rounded">
-        <div>
-            <img class="flag-img shadow-sm" src="${country.flags.png}">
-            </div>
-        <div class="p-3">
-            <h3 class="country-card__name">${country.name.official}</h3>
-            <hr>
-            ${
-              country.capital == ""
-                ? "<p class='country-card__text-capital'>Capital:  <span class='bg-danger text-white'>None</span></p>"
-                : `<p class='country-card__text-capital'>Capital: ${country.capital}</p>`
-            }
-            <p class="country-card__text-region">Region: ${country.region}</p>
-            <p class="country-card__text-population">Population: ${
-              country.population
-            }</p>
-        </div>
-    </div>
-</article>
-    `;
+    htmlTxt = countries.map(generateCountryHtmlTxt).join(``);
   });
 
   outputRegionIcon.innerHTML="";
@@ -56,28 +35,8 @@ const showCountryByName = async () => {
   let htmlTxt = "";
 
   countries.forEach((country) => {
-    htmlTxt += `
-    <article class="col-sm-12 col-md-6 col-lg-4">
-    <div class="country-card shadow h-100 rounded">
-        <div>
-            <img class="flag-img shadow-sm" src="${country.flags.png}">
-            </div>
-        <div class="p-3">
-            <h3 class="country-card__name">${country.name.official}</h3>
-            <hr>
-            ${
-              country.capital == ""
-                ? "<p class='country-card__text-capital'>Capital:  <span class='bg-danger text-white'>None</span></p>"
-                : `<p class='country-card__text-capital'>Capital: ${country.capital}</p>`
-            }
-            <p class="country-card__text-region">Region: ${country.region}</p>
-            <p class="country-card__text-population">Population: ${
-              country.population
-            }</p>
-        </div>
-    </div>
-</article>
-    `;
+    htmlTxt = countries.map(generateCountryHtmlTxt).join(``);
+
   });
   outputRegionIcon.innerHTML="";
   outputCountries.innerHTML = htmlTxt;
@@ -94,32 +53,34 @@ const showCountryByRegion = async () => {
   let htmlTxt = "";
 
   countries.forEach((country) => {
-    htmlTxt += `
-    <article class="col-sm-12 col-md-6 col-lg-4">
-    <div class="country-card shadow h-100 rounded">
-        <div>
-            <img class="flag-img shadow-sm" src="${country.flags.png}">
-            </div>
-        <div class="p-3">
-            <h3 class="country-card__name">${country.name.official}</h3>
-            <hr>
-            ${
-              country.capital == ""
-                ? "<p class='country-card__text-capital'>Capital: <span class='bg-danger text-white'>None</span></p>"
-                : `<p class='country-card__text-capital'>Capital: ${country.capital}</p>`
-            }
-            <p class="country-card__text-region">Region: ${country.region}</p>
-            <p class="country-card__text-population">Population: ${
-              country.population
-            }</p>
-        </div>
-    </div>
-</article>
-    `;
+    htmlTxt = countries.map(generateCountryHtmlTxt).join(``);
   });
   
   outputCountries.innerHTML = htmlTxt;
 };
+
+const generateCountryHtmlTxt = (country) => {
+  return `
+    <article class="col-sm-12 col-md-6 col-lg-4">
+      <div class="country-card shadow h-100 rounded">
+        <div>
+          <img class="flag-img shadow-sm" src="${country.flags.png}">
+        </div>
+        <div class="p-3">
+          <h3 class="country-card__name">${country.name.official}</h3>
+          <hr>
+          ${
+            country.capital == ""
+              ? "<p class='country-card__text-capital'>Capital:  <span class='bg-danger text-white'>None</span></p>"
+              : `<p class='country-card__text-capital'>Capital: ${country.capital}</p>`
+          }
+          <p class="country-card__text-region">Region: ${country.region}</p>
+          <p class="country-card__text-population">Population: ${country.population}</p>
+        </div>
+      </div>
+    </article>
+  `;
+   }
 
 
 const showRegionIcon = (region) =>{
