@@ -1,2 +1,3 @@
-# Portfolio
-My portfolio including school- and private projects
+# CountryPedia
+The project is made with HTML, CSS, JavaScript, Bootstrap and Axios. 
+The content is gathered from https://restcountries.com/ - API.
