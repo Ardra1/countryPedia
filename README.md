@@ -1,4 +1,4 @@
-# [CountryPedia](https://ardra1.github.io/countryPedia/index)
+# [CountryPedia](https://ardra1.github.io/countryPedia/)
 
 **Description**
 <br>
