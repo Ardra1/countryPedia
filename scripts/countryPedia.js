@@ -1,4 +1,4 @@
-import countryService from "./services/countryPediaService.js";
+import countryService from "./countryPediaModule/countryPediaService.js";
 
 //Buttons
 const buttonSearchName = document.querySelector("#search-container__button-name");
